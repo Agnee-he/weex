@@ -1,7 +1,14 @@
 <template>
   <div class="wrapper">
-    <image :src="logo" class="logo" />
-    <text class="greeting">The environment is ready!</text>
+    <div class="box1">
+      <text>12</text>
+    </div>
+    <div class="box2">
+      <text>34</text>
+    </div>
+    <a href="../dist/app.weex.js">
+      <text>222</text>
+    </a>
     <router-view/>
   </div>
 </template>
@@ -11,7 +18,6 @@ export default {
   name: 'App',
   data () {
     return {
-      logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png'
     }
   }
 }
@@ -22,19 +28,22 @@ export default {
     justify-content: center;
     align-items: center;
   }
-  .logo {
-    width: 424px;
+  .box1{
     height: 200px;
+    width: 200px;
+    background-image: linear-gradient(to top,black,white);
+    border-width: 10px;
+    border-color: #00B4FF;
+    border-style: solid;
+    position: relative;
+    z-index: 20;
   }
-  .greeting {
-    text-align: center;
-    margin-top: 70px;
-    font-size: 50px;
-    color: #41B883;
-  }
-  .message {
-    margin: 30px;
-    font-size: 32px;
-    color: #727272;
+  .box2{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    position: relative;
+    z-index: 30;
+    bottom: 100px;
   }
 </style>
